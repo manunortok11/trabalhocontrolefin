@@ -1,0 +1,36 @@
+
+#formsalvar {
+  width: 400px;
+  padding: 20px;
+  background-color: #185964;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #fff;
+  font-size: 18px;
+}
+
+
+#formsalvar button {
+  background-color: #ffffff;
+  color: #1c464e;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+
+}
+
+
+#btnResumo {
+  background-color: #ffffff;
+  color: #1c464e;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+
+}
