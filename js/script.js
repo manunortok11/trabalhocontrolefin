@@ -23,6 +23,7 @@ document.getElementById("formsalvar").addEventListener("submit", function(event)
     document.getElementById('valor').value = "";
 
    exibir_despesas()
+   exibir_resumo()
 })
 
 function exibir_despesas(){
@@ -39,7 +40,7 @@ for(let i=0;i<lista_despesas.length;i++){
     var salario = document.getElementById("salario").value;
     localStorage.setItem("salario", salario);
 
-
+}
 
     function exibir_resumo() {
     let salario = Number(localStorage.getItem("salario")) || 0;
@@ -56,15 +57,20 @@ for(let i=0;i<lista_despesas.length;i++){
     "Salário: R$ " + salario + "<br>" +
     "Total de despesas: R$ " + total + "<br>" +
     "Saldo final: R$ " + saldo;
+    }
 
-}
-    document.getElementById("btnResumo").addEventListener("click", function() {
-    exibir_resumo();
-});
+
 
     document.getElementById("btnLimpar").addEventListener("click", function() {
     localStorage.removeItem("listagem");
+    salario= 0
+    total=0
+    saldo=0
+    document.getElementById("saldofinal").innerHTML =
+    "Salário: R$ " + salario + "<br>" +
+    "Total de despesas: R$ " + total + "<br>" +
+    "Saldo final: R$ " + saldo;
     exibir_despesas();
+
 });
 
-}
